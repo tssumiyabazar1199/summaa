@@ -1,1 +1,248 @@
-changegeejjfhjhfjx
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #13124F;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: #1B1B6C;
+  color: white;
+  text-align: left;
+  padding: 60px 0;
+}
+
+.jumbotron h1 {
+  margin-bottom: 30px;
+  font-weight: 3000px;
+}
+
+.jumbotron p {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #F61067;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #352BA5;
+}
+
+.content {
+  background-color: white;
+  padding: 40px 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.left h2 {
+  color: #1B1B6C;
+  font-weight: 700;
+}
+
+.video {
+  margin-top: 20px;
+}
+
+.messages {
+  justify-content: center;
+  background-color: #F61067;
+  color: #13124F;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background-color: white;
+  color: #F61067;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.widget {
+  background-color: #13124F;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.widget.poll {
+  background-color: white; 
+  padding: 15px;          
+  border-radius: 8px;      
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.widget h4 {
+  margin-top: 0;
+  color: #9090A5;
+  font-weight: 700;
+}
+
+.widget p {
+  font-size: 0.9em;
+  color:black;
+}
+
+.widget input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-send {
+  background-color: #F61067;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.btn-send:hover {
+  background-color: white;
+}
+
+.widget small a {
+  color:#352BA5;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.widget small a:hover {
+  text-decoration: underline;
+}
+
+
+.progress {
+  background-color: #ddd;
+  height: 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress .bar {
+  background-color: #2AD392;
+  height: 100%;
+}
+
+.poll-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.poll-btns button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 4px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+.cool {
+  background-color: #2AD392;
+}
+
+.lame {
+  background-color: #F61067;
+}
+
+.alert {
+  background-color: #9090A5;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #13124F;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+}
+
+
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 1 1 100%;
+  }
+
+  .right {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .jumbotron {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .widget, .messages {
+    text-align: center;
+  }
+
+  .poll-btns {
+    flex-direction: column;
+  }
+
+  .poll-btns button {
+    margin-bottom: 8px;
+  }
+}
