@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #ADD8E6; /* Baby blue */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+#startBtn {
+    background: white;
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #4a90e2;
+    box-shadow: 0 0 10px white;
+    transition: 0.2s;
+}
+
+#startBtn:hover {
+    background: #e3f1ff;
+    box-shadow: 0 0 15px white;
+}
+
+#startBtn:active {
+    transform: scale(0.95);
+}
+
+#letters button {
+    background: white;
+    border: 2px solid #4a90e2;
+    padding: 10px;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.2s;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+#letters button:hover {
+    background: #d1e8ff;
+    box-shadow: 0 0 15px #ffffff;
+}
+
+#letters button:active {
+    transform: scale(0.9);
+}
+
+#letters button:disabled {
+    background: #c7c7c7;
+    color: white;
+    box-shadow: none;
+}
+
+#wordDisplay {
+    margin: 20px;
+    font-size: 32px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="space-bg"></div>
+
+    <h1 class="title">SPACE EXPLORER</h1>
+
+    <div class="solar-system">
+
+        <div class="sun"></div>
+
+        <div class="planet mercury" data-name="Mercury" data-info="The smallest planet."></div>
+        <div class="planet venus" data-name="Venus" data-info="Hottest planet with toxic atmosphere."></div>
+        <div class="planet earth" data-name="Earth" data-info="Our home planet with life."></div>
+        <div class="planet mars" data-name="Mars" data-info="The Red Planet."></div>
+        <div class="planet jupiter" data-name="Jupiter" data-info="The largest planet."></div>
+        <div class="planet saturn" data-name="Saturn" data-info="Known for its rings."></div>
+        <div class="planet uranus" data-name="Uranus" data-info="Ice giant. Spins sideways."></div>
+        <div class="planet neptune" data-name="Neptune" data-info="Farthest known planet."></div>
+
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+        <h2 id="planetName"></h2>
+        <p id="planetInfo"></p>
+        <button onclick="closeInfo()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

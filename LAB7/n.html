@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Нэгдсэн тооцоолол</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    section { border: 1px solid #ddd; padding: 15px; margin-bottom: 25px; border-radius: 10px; }
+    h2 { margin-top: 0; }
+  </style>
+</head>
+<body>
+
+<!-- 1. Палиндром -->
+<section>
+  <h2>1. Цифрүүдийн нийлбэр ба палиндром</h2>
+  <input id="palNum" placeholder="Тоог оруул">
+  <button onclick="checkPal()">Шалгах</button>
+  <p id="palOut1"></p>
+  <p id="palOut2"></p>
+  <p id="palOut3"></p>
+</section>
+
+<!-- 2. Чоно туулай -->
+<section>
+  <h2>2. Чоно туулай гүйцэх хугацаа</h2>
+  <input id="distInput" placeholder="Зай (км)">
+  <button onclick="wolf()">Тооцох</button>
+  <p id="wf1"></p>
+  <p id="wf2"></p>
+  <p id="wf3"></p>
+  <p id="wf4"></p>
+</section>
+
+<!-- 3. Байшингийн тооцоо -->
+<section>
+  <h2>3. Орц / Давхар / Хаалга</h2>
+  <input id="flatNum" placeholder="Тоот оруул">
+  <button onclick="house()">Тооцох</button>
+  <p id="ht1"></p>
+  <p id="ht2"></p>
+  <p id="ht3"></p>
+</section>
+
+<!-- 4. ХБЕХ -->
+<section>
+  <h2>4. ХБЕХ олох</h2>
+  <input id="lcmInput" placeholder="5 тоо (ж: 4 6 8 12 14)">
+  <button onclick="calcLCM()">Тооцох</button>
+  <p id="lcmOut"></p>
+</section>
+
+<!-- 5. Өглөө/Орой -->
+<section>
+  <h2>5. Өглөө / Орой квадрат / язгуур</h2>
+  <input id="timeNum" placeholder="Тоог оруул">
+  <button onclick="timeCalc()">Тооцох</button>
+  <p id="timeOut"></p>
+</section>
+
+<script>
+/* 1. Палиндром */
+function checkPal(){
+  let v = palNum.value;
+  let sum = [...Math.abs(+v)+""].reduce((a,b)=>a + +b, 0);
+  let pal = sum == [...(""+sum)].reverse().join("");
+
+  palOut1.innerHTML = "Оруулсан тоо: " + v;
+  palOut2.innerHTML = "Цифрүүдийн нийлбэр: " + sum;
+  palOut3.innerHTML = "Палиндром эсэх: " + (pal ? "Тийм" : "Үгүй");
+}
+
+/* 2. Чоно туулай */
+function wolf(){
+  let dist = +distInput.value;
+  let rel = 25 - 18;
+  let hours = dist / rel;
+  let minutes = Math.floor(hours * 60);
+  let seconds = Math.round((hours * 3600) % 60);
+
+  wf1.innerHTML = "Чоно: 25 км/ц, Туулай: 18 км/ц";
+  wf2.innerHTML = "Зай: " + dist + " км";
+  wf3.innerHTML = "Гүйцэх хугацаа: " + minutes + " минут " + seconds + " секунд";
+  wf4.innerHTML = "Хурдны зөрүү: 7 км/ц";
+}
+
+/* 3. Байшингийн тооцоо */
+function house(){
+  let num = +flatNum.value;
+  let perEntrance = 36; // 9 давхар, 4 айл = 36
+  let entrance = Math.ceil(num / perEntrance);
+  let inside = num - (entrance - 1) * perEntrance;
+  let floor = Math.ceil(inside / 4);
+  let door = ((inside - 1) % 4) + 1;
+
+  ht1.innerHTML = "Орц: " + entrance;
+  ht2.innerHTML = "Давхар: " + floor;
+  ht3.innerHTML = "Хаалга: " + door;
+}
+
+/* 4. ХБЕХ */
+function gcd(a,b){ return b ? gcd(b, a%b) : a; }
+function lcm(a,b){ return a / gcd(a,b) * b; }
+
+function calcLCM(){
+  let arr = lcmInput.value.trim().split(" ").map(Number);
+  let ans = arr.reduce((x,y)=>lcm(x,y));
+  lcmOut.innerHTML = "ХБЕХ = " + ans;
+}
+
+/* 5. Өглөө / Орой */
+function timeCalc(){
+  let x = Number(timeNum.value);
+  let h = new Date().getHours();
+
+  if(h < 18){
+    timeOut.innerHTML = "Өглөө → квадрат: " + (x**2);
+  } else {
+    timeOut.innerHTML = "Орой → язгуур: " + Math.sqrt(x);
+  }
+}
+</script>
+
+</body>
+</html>
