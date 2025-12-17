@@ -562,3 +562,79 @@ body {
     outline: none;
     background-color: rgb(255,255,255,0.4);
 }
+.amazon-footer {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* SIGN IN */
+.footer-signin {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  color: #000;
+}
+
+.footer-signin button {
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  padding: 8px 90px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer-signin a {
+  color: #007185;
+  text-decoration: none;
+}
+
+/* BACK TO TOP */
+.footer-top {
+  background: #37475a;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer-top a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* MAIN */
+.footer-main {
+  background: #232f3e;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 80px;
+}
+
+.footer-main h4 {
+  margin-bottom: 10px;
+}
+
+.footer-main a {
+  display: block;
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  background: #131a22;
+  text-align: center;
+  padding: 30px;
+}
+
+.footer-bottom img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.footer-options span {
+  border: 1px solid #848688;
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 13px;
+}
