@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="mn">
 <head>
   <meta charset="UTF-8">
   <title>Нэгдсэн тооцоолол</title>
   <style>
     body { font-family: Arial; margin: 20px; }
-    section { border: 1px solid #ddd; padding: 15px; margin-bottom: 25px; border-radius: 10px; }
+    section {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+    }
     h2 { margin-top: 0; }
+    input { padding: 5px; }
+    button { padding: 5px 10px; margin-left: 5px; }
   </style>
 </head>
+
 <body>
 
 <section>
@@ -41,12 +49,11 @@
 
 <section>
   <h2>4. ХБЕХ олох</h2>
-  <input id="lcmInput" placeholder="5 тоо (ж: 4 6 8 12 14)">
+  <input id="lcmInput" placeholder="Ж: 4 6 8 12 14">
   <button onclick="calcLCM()">Тооцох</button>
   <p id="lcmOut"></p>
 </section>
 
-<!-- 5. Өглөө/Орой -->
 <section>
   <h2>5. Өглөө / Орой квадрат / язгуур</h2>
   <input id="timeNum" placeholder="Тоог оруул">
@@ -57,8 +64,10 @@
 <script>
 function checkPal(){
   let v = palNum.value;
-  let sum = [...Math.abs(+v)+""].reduce((a,b)=>a + +b, 0);
-  let pal = sum == [...(""+sum)].reverse().join("");
+  let sum = [...Math.abs(Number(v)).toString()]
+            .reduce((a,b)=>a + Number(b), 0);
+
+  let pal = sum.toString() === sum.toString().split("").reverse().join("");
 
   palOut1.innerHTML = "Оруулсан тоо: " + v;
   palOut2.innerHTML = "Цифрүүдийн нийлбэр: " + sum;
@@ -66,8 +75,11 @@ function checkPal(){
 }
 
 function wolf(){
-  let dist = +distInput.value;
-  let rel = 25 - 18;
+  let dist = Number(distInput.value);
+  let speedWolf = 25;
+  let speedRabbit = 18;
+  let rel = speedWolf - speedRabbit;
+
   let hours = dist / rel;
   let minutes = Math.floor(hours * 60);
   let seconds = Math.round((hours * 3600) % 60);
@@ -79,37 +91,65 @@ function wolf(){
 }
 
 function house(){
-  let num = +flatNum.value;
-  let perEntrance = 36; 
+  let num = Number(flatNum.value);
+
+  let floors = 9;
+  let entrances = 3;
+  let flatsPerFloor = 4;
+
+  let perEntrance = floors * flatsPerFloor; 
+  let totalFlats = perEntrance * entrances; 
+
+  if(num < 1 || num > totalFlats){
+    ht1.innerHTML = "Ийм тоот байхгүй";
+    ht2.innerHTML = "";
+    ht3.innerHTML = "";
+    return;
+  }
+
   let entrance = Math.ceil(num / perEntrance);
   let inside = num - (entrance - 1) * perEntrance;
-  let floor = Math.ceil(inside / 4);
-  let door = ((inside - 1) % 4) + 1;
+  let floor = Math.ceil(inside / flatsPerFloor);
+  let door = ((inside - 1) % flatsPerFloor) + 1;
 
   ht1.innerHTML = "Орц: " + entrance;
   ht2.innerHTML = "Давхар: " + floor;
   ht3.innerHTML = "Хаалга: " + door;
 }
 
-function gcd(a,b){ return b ? gcd(b, a%b) : a; }
-function lcm(a,b){ return a / gcd(a,b) * b; }
-
+function gcd(a,b){
+  return b ? gcd(b, a % b) : a;
+}
+function lcm(a,b){
+  return a / gcd(a,b) * b;
+}
 function calcLCM(){
   let arr = lcmInput.value.trim().split(" ").map(Number);
+
+  if(arr.length < 2 || arr.some(isNaN)){
+    lcmOut.innerHTML = "Дор хаяж 2 зөв тоо оруул";
+    return;
+  }
+
   let ans = arr.reduce((x,y)=>lcm(x,y));
   lcmOut.innerHTML = "ХБЕХ = " + ans;
 }
-
+21
 function timeCalc(){
   let x = Number(timeNum.value);
-  let h = new Date().getHours();
+  let h = new Date().getHours(); 
 
-  if(h < 18){
-    timeOut.innerHTML = "Өглөө → квадрат: " + (x**2);
+  if(h < 12){
+    timeOut.innerHTML = "Өглөө (00:00–11:59) → квадрат: " + (x ** 2);
   } else {
-    timeOut.innerHTML = "Орой → язгуур: " + Math.sqrt(x);
+    if(x < 0){
+      timeOut.innerHTML = "Орой (12:00–23:59) → сөрөг тооны язгуур олдохгүй";
+    } else {
+      timeOut.innerHTML = "Орой (12:00–23:59) → язгуур: " + Math.sqrt(x);
+    }
   }
 }
+
 </script>
 
 </body>
