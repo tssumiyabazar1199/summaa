@@ -1,4 +1,3 @@
-
 import { todayDeal } from "./todayDeal.js"
 
 let slideBtnLeft = document.getElementById("slide-btn-left")
@@ -132,4 +131,3 @@ today_deal_btn_nextEl.addEventListener("click", () => {
     
     
 })
-
