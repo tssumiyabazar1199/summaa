@@ -1,7 +1,4 @@
-/*
-https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png
-*/
-
+ы
 * {
     box-sizing: border-box;
 }
@@ -16,11 +13,8 @@ body {
     color: white;
 }
 
-
-/* layout**/
 .container {
     width: 99%;
-    /* background-color: red; */
     height: 100%;
     margin: auto;
 
@@ -31,15 +25,12 @@ body {
     align-items: center;
 }
 
-/**logo***/
 .logo-container {
     height: 50px;
     display: flex;
     align-items: center;
     font-size: 1.1rem;
 
-
-    /* overflow: hidden; */
 }
 
 .logo {
@@ -66,7 +57,6 @@ body {
     border: 1.5px solid #ffffff;
 }
 
-/***********addresss************/
 .address-container {
     margin-left: 10px;
 }
@@ -90,8 +80,6 @@ body {
     margin-right: 3px;
 }
 
-
-/***search-container****/
 .search-container {
     background-color: red;
     margin-left: 25px;
@@ -132,8 +120,6 @@ body {
     color: #000;
 }
 
-
-/***lauguage section*/
 .language-container {
     margin-left: 25px;
 }
@@ -151,8 +137,6 @@ body {
     width: 100%;
 }
 
-
-/***login-container***/
 .login-container {
     margin-left: 15px;
 }
@@ -183,7 +167,6 @@ body {
     width: 70px;
 }
 
-/****cart container***/
 .cart-container {
     font-size: 1.1rem;
     display: flex;
@@ -193,7 +176,6 @@ body {
     font-size: 1rem;
 }
 
-/**************************************navigation*****************************************/
 .nav {
     height: 40px;
     background-color: #232f3d;
@@ -260,11 +242,6 @@ body {
 }
 
 
-
-
-
-
-/*--image slider --*/
 .image-container {
     position: relative;
 }
@@ -277,7 +254,7 @@ body {
 .image-item {
     min-width: 100%;
     height: 600px;
-    /* transform: translateX(-300%); */
+
     transition: transform 0.3s;
 
 }
@@ -316,8 +293,6 @@ body {
     margin: 2px;
 }
 
-
-/*sidebar navigation****/
 #open-nav-sidebar {
     cursor: pointer;
 }
@@ -397,12 +372,10 @@ body {
     padding-bottom: 100px;
 }
 
-/*product card container*/
 .main{
     position: relative;
     top:-350px;
-    /* background-color: rgb(196, 240, 240); */
-    /* filter: blur(8px); */
+
     
 }
 .productBackgraound{
@@ -465,10 +438,6 @@ body {
     cursor: pointer;
 }
 
-
-/***
-        Today's deals section
-***/
 .today_deals_container{
     margin: 30px;
     box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1),
@@ -490,7 +459,6 @@ body {
 }
 
 .today_deals_product_container{
-    /* background-color: red; */
     height: 300px;
     position: relative;
 }
@@ -520,14 +488,13 @@ body {
 .today_deals_product_item img{
     width: 100%;
     height: 100%;
-    /* padding: 20px 20px; */
     background-color: red;
 }
 .today_deals_product_item p{
     justify-self: flex-end;
 }
 .discount_Contaienr{
-    /* border: 2px solid red; */
+
 }
 .discount_Contaienr a{
     padding: 5px 10px;
@@ -566,8 +533,6 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
 }
-
-/* SIGN IN */
 .footer-signin {
   text-align: center;
   padding: 30px;
@@ -588,8 +553,6 @@ body {
   color: #007185;
   text-decoration: none;
 }
-
-/* BACK TO TOP */
 .footer-top {
   background: #37475a;
   text-align: center;
@@ -601,7 +564,6 @@ body {
   text-decoration: none;
 }
 
-/* MAIN */
 .footer-main {
   background: #232f3e;
   display: flex;
@@ -620,7 +582,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* BOTTOM */
 .footer-bottom {
   background: #131a22;
   text-align: center;

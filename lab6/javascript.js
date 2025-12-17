@@ -32,7 +32,7 @@ function handleRightBtn() {
     })
 
 }
-//render automatic
+
 function renderSlideAuto() {
 
     if (startSlider >= -endSlider + 100) {
@@ -44,16 +44,10 @@ function renderSlideAuto() {
 }
 setInterval(renderSlideAuto, 2000);
 
-
-
-
-/***** sidebar navigation  */
 const sidebarNavigationEl = document.getElementById("sidebar-container-navigation-id")
 const sidebarOpenNavigationEl = document.getElementById("open-nav-sidebar")
 const sidebarCloseNavigationEl = document.getElementById("sidebar-navigation-close")
 
-
-//  console.log(sidebarNavigationEl)
 
 sidebarOpenNavigationEl.addEventListener("click", () => {
     sidebarNavigationEl.classList.toggle("slidebar-show")
@@ -62,10 +56,7 @@ sidebarCloseNavigationEl.addEventListener("click", () => {
     sidebarNavigationEl.classList.toggle("slidebar-show")
 })
 
-
-
-
-//today deals 
+ 
 console.log(todayDeal)
 let todayDealProductListEl = document.querySelector(".today_deals_product_list")
 console.log(todayDealProductListEl)
@@ -75,7 +66,7 @@ let todayDealProductHTML = ""
 let todayDeallength = todayDeal.length
 
 for (let i = 0; i < todayDeallength; i++) {
-    // console.log(todayDeal[i])
+
 
     todayDealProductHTML += `
         <div class="today_deals_product_item">
@@ -95,7 +86,7 @@ for (let i = 0; i < todayDeallength; i++) {
 }
 
 todayDealProductListEl.innerHTML = todayDealProductHTML
-//  console.log(todayDealProductHTML)
+
 
 let today_deal_btn_prevEl = document.getElementById("today_deal_btn_prev")
 let today_deal_btn_nextEl = document.getElementById("today_deal_btn_next")
@@ -119,7 +110,6 @@ today_deal_btn_prevEl.addEventListener("click", () => {
 })
 
 today_deal_btn_nextEl.addEventListener("click", () => {
-    // alert("next")
     
     if(startProduct > -1500){
         startProduct -= 500
