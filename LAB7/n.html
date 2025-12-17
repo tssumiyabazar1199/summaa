@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- 1. Палиндром -->
 <section>
   <h2>1. Цифрүүдийн нийлбэр ба палиндром</h2>
   <input id="palNum" placeholder="Тоог оруул">
@@ -21,7 +20,6 @@
   <p id="palOut3"></p>
 </section>
 
-<!-- 2. Чоно туулай -->
 <section>
   <h2>2. Чоно туулай гүйцэх хугацаа</h2>
   <input id="distInput" placeholder="Зай (км)">
@@ -32,7 +30,6 @@
   <p id="wf4"></p>
 </section>
 
-<!-- 3. Байшингийн тооцоо -->
 <section>
   <h2>3. Орц / Давхар / Хаалга</h2>
   <input id="flatNum" placeholder="Тоот оруул">
@@ -42,7 +39,6 @@
   <p id="ht3"></p>
 </section>
 
-<!-- 4. ХБЕХ -->
 <section>
   <h2>4. ХБЕХ олох</h2>
   <input id="lcmInput" placeholder="5 тоо (ж: 4 6 8 12 14)">
@@ -59,7 +55,6 @@
 </section>
 
 <script>
-/* 1. Палиндром */
 function checkPal(){
   let v = palNum.value;
   let sum = [...Math.abs(+v)+""].reduce((a,b)=>a + +b, 0);
@@ -70,7 +65,6 @@ function checkPal(){
   palOut3.innerHTML = "Палиндром эсэх: " + (pal ? "Тийм" : "Үгүй");
 }
 
-/* 2. Чоно туулай */
 function wolf(){
   let dist = +distInput.value;
   let rel = 25 - 18;
@@ -84,10 +78,9 @@ function wolf(){
   wf4.innerHTML = "Хурдны зөрүү: 7 км/ц";
 }
 
-/* 3. Байшингийн тооцоо */
 function house(){
   let num = +flatNum.value;
-  let perEntrance = 36; // 9 давхар, 4 айл = 36
+  let perEntrance = 36; 
   let entrance = Math.ceil(num / perEntrance);
   let inside = num - (entrance - 1) * perEntrance;
   let floor = Math.ceil(inside / 4);
@@ -98,7 +91,6 @@ function house(){
   ht3.innerHTML = "Хаалга: " + door;
 }
 
-/* 4. ХБЕХ */
 function gcd(a,b){ return b ? gcd(b, a%b) : a; }
 function lcm(a,b){ return a / gcd(a,b) * b; }
 
@@ -108,7 +100,6 @@ function calcLCM(){
   lcmOut.innerHTML = "ХБЕХ = " + ans;
 }
 
-/* 5. Өглөө / Орой */
 function timeCalc(){
   let x = Number(timeNum.value);
   let h = new Date().getHours();
