@@ -1,10 +1,12 @@
-ы
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Хөндлөн гүйлт үүсэхээс сэргийлнэ */
+    background-color: #eaeded; /* Amazon-ы үндсэн цайвар саарал дэвсгэр өнгө */
 }
 
 .header {
@@ -372,12 +374,13 @@ body {
     padding-bottom: 100px;
 }
 
-.main{
+.main {
     position: relative;
-    top:-350px;
-
-    
+    /* top: -350px;  <-- Үүнийг устга эсвэл comment болго */
+    margin-top: -350px; /* Энэ нь элементийг дээш нь татахын зэрэгцээ доод талын хоосон зайг арилгана */
+    z-index: 5;
 }
+    
 .productBackgraound{
     background-color: rgba(213, 247, 247,0.4);
 }
@@ -530,72 +533,232 @@ body {
     background-color: rgb(255,255,255,0.4);
 }
 .amazon-footer {
-  font-family: Arial, sans-serif;
-  color: #fff;
+    width: 100%;
+    background-color: #232f3e;
+    font-family: 'Arial', sans-serif;
+    margin-top: 0; /* Шаардлагатай бол зайг нь тааруулаарай */
+    display: flow-root; /* Дотоод элементүүдийн зайг зөв тооцно */
 }
+
+/* 1. Sign in section */
 .footer-signin {
-  text-align: center;
-  padding: 30px;
-  background: #fff;
-  color: #000;
+    background-color: #fff;
+    padding: 35px 0;
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #ddd;
+    color: #000;
 }
 
-.footer-signin button {
-  background: #ffd814;
-  border: 1px solid #fcd200;
-  padding: 8px 90px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-weight: bold;
+.signin-inner p {
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-.footer-signin a {
-  color: #007185;
-  text-decoration: none;
-}
-.footer-top {
-  background: #37475a;
-  text-align: center;
-  padding: 15px;
-}
-
-.footer-top a {
-  color: #fff;
-  text-decoration: none;
+.signin-btn {
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid #a88734;
+    border-radius: 4px;
+    width: 230px;
+    padding: 6px 0;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
 
-.footer-main {
-  background: #232f3e;
-  display: flex;
-  justify-content: space-around;
-  padding: 40px 80px;
+.signin-btn:hover {
+    background: linear-gradient(to bottom, #f5d78e, #eeb933);
 }
 
-.footer-main h4 {
-  margin-bottom: 10px;
+.new-customer {
+    font-size: 11px;
 }
 
-.footer-main a {
-  display: block;
-  color: #ddd;
-  font-size: 14px;
-  margin-bottom: 8px;
+.new-customer a {
+    color: #007185;
+    text-decoration: none;
 }
 
-.footer-bottom {
-  background: #131a22;
-  text-align: center;
-  padding: 30px;
+.new-customer a:hover {
+    text-decoration: underline;
+    color: #c45500;
 }
 
-.footer-bottom img {
-  width: 100px;
-  margin-bottom: 15px;
+/* 2. Back to top */
+.footer-back-to-top {
+    background-color: #37475a;
+    text-align: center;
+    padding: 15px 0;
 }
 
-.footer-options span {
-  border: 1px solid #848688;
-  padding: 5px 10px;
-  margin: 0 5px;
-  font-size: 13px;
+.footer-back-to-top a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+}
+
+.footer-back-to-top:hover {
+    background-color: #485769;
+}
+
+/* 3. Links Grid */
+.footer-links-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.footer-column h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #DDD;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 4. Logo section */
+.footer-logo-line {
+    border-top: 1px solid #3a4553;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-logo-img {
+    width: 76px;
+    height: 23px;
+    background: url('https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+    background-position: -10px -90px;
+}
+
+.footer-settings {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-settings span {
+    border: 1px solid #848688;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* 5. Dark Bottom */
+.footer-bottom-copy {
+    background-color: #131a22;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.legal-links {
+    margin-bottom: 10px;
+}
+
+.legal-links a {
+    color: #DDD;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.footer-bottom-copy p {
+    color: #DDD;
+    font-size: 12px;
+}
+.footer-services-container {
+    background-color: #131a22; /* Хамгийн доод талын хар өнгө */
+    padding: 40px 0 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-services-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 багана бүхий хүснэгт */
+    gap: 20px 10px;
+    padding: 0 20px;
+}
+
+.service-item {
+    cursor: pointer;
+}
+
+.service-item a {
+    display: block;
+    color: #DDD;
+    font-size: 11px; /* Маш жижиг текст */
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.service-item p {
+    color: #999;
+    font-size: 10px;
+    margin: 2px 0 0 0;
+    line-height: 1.1;
+}
+
+.service-item:hover a {
+    text-decoration: underline;
+}
+
+/* Legal & Copyright */
+.footer-legal {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.legal-links {
+    margin-bottom: 5px;
+}
+
+.legal-links a {
+    color: #DDD;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-legal p {
+    color: #DDD;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.fa-toggle-on {
+    color: #00A8E1; /* Цэнхэр икон */
+    margin-left: 2px;
 }
