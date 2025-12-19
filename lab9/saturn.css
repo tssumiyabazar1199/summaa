@@ -1,0 +1,93 @@
+.saturn-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    background: linear-gradient(to right, rgba(0,0,0,0.85) 25%, transparent), 
+                url('https://images.unsplash.com/photo-1614732484003-ef9881555dc3?q=80&w=1974&auto=format&fit=crop') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    background: transparent;
+}
+
+.planet-title {
+    font-size: 80px;
+    font-weight: bold;
+    color: #e3c08d; 
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.planet-subtitle {
+    font-size: 20px;
+    color: #c9ae82;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #eeeeee;
+    max-width: 600px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(227, 192, 141, 0.3); 
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 160px;
+    backdrop-filter: blur(5px);
+}
+
+.stat-card .label {
+    display: block;
+    font-size: 12px;
+    color: #bbb;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.stat-card .value {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 40px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #e3c08d;
+    color: #1a1a1a;
+    border-color: #e3c08d;
+    box-shadow: 0 0 20px rgba(227, 192, 141, 0.4);
+}

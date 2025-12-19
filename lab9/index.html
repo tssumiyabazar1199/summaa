@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Space Explorer</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Нарны Аймаг - Интерактив</title>
 </head>
 <body>
 
     <div class="space-bg"></div>
 
-    <h1 class="title">SPACE EXPLORER</h1>
+    <nav class="navbar">
+        <div class="header-content">
+            <div class="logo">☀️ Нарны Аймаг</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-btn active">Home</a></li>
+                <li><a href="mercury.html" class="nav-btn">Буд</a></li>
+                <li><a href="venus.html" class="nav-btn">Сугар</a></li>
+                <li><a href="earth.html" class="nav-btn">Дэлхий</a></li>
+                <li><a href="mars.html" class="nav-btn">Ангараг</a></li>
+                <li><a href="jupiter.html" class="nav-btn">Бархасбадь</a></li>
+                <li><a href="saturn.html" class="nav-btn">Санчир</a></li>
+                <li><a href="uranus.html" class="nav-btn">Тэнгэрийн ван</a></li>
+                <li><a href="neptune.html" class="nav-btn">Далай ван</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="solar-system">
-
         <div class="sun"></div>
+        
+        <div class="orbit" style="width: 160px; height: 160px;"></div>
+        <div class="orbit" style="width: 250px; height: 250px;"></div>
+        <div class="orbit" style="width: 340px; height: 340px;"></div>
+        <div class="orbit" style="width: 430px; height: 430px;"></div>
+        <div class="orbit" style="width: 520px; height: 520px;"></div>
+        <div class="orbit" style="width: 610px; height: 610px;"></div>
+        <div class="orbit" style="width: 700px; height: 700px;"></div>
+        <div class="orbit" style="width: 790px; height: 790px;"></div>
 
-        <div class="planet bud" data-name="Буд" data-info="Нарны аймгийн хамгийн жижиг гариг."></div>
-        <div class="planet venus" data-name="Сугар" data-info="Халуун гариг, хорт уур амьсгалтай."></div>
-        <div class="planet earth" data-name="Дэлхий" data-info="Бидний амьдардаг гариг. Амьдралтай."></div>
-        <div class="planet mars" data-name="Ангараг" data-info="Улаан гариг."></div>
-        <div class="planet jupiter" data-name="Бархасбадь" data-info="Хамгийн том гариг."></div>
-        <div class="planet saturn" data-name="Санчир" data-info="Сарнай шиг бөгжөөрөө алдартай."></div>
-        <div class="planet uranus" data-name="Тэнгэрийн ван" data-info="Мөсөн гариг. Хажуу тийшээ эргэдэг."></div>
-        <div class="planet neptune" data-name="Далай ван" data-info="Хамгийн хол орших мэдэгдсэн гариг."></div>
-
+        <div class="planet mercury" data-url="mercury.html"></div>
+        <div class="planet venus" data-url="venus.html"></div>
+        <div class="planet earth" data-url="earth.html"></div>
+        <div class="planet mars" data-url="mars.html"></div>
+        <div class="planet jupiter" data-url="jupiter.html"></div>
+        <div class="planet saturn" data-url="saturn.html"></div>
+        <div class="planet uranus" data-url="uranus.html"></div>
+        <div class="planet neptune" data-url="neptune.html"></div>
     </div>
-
-    <div class="info-panel" id="infoPanel">
-        <h2 id="planetName"></h2>
-        <p id="planetInfo"></p>
-        <button onclick="closeInfo()">Хаах</button>
-    </div>
+    
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,90 @@
+
+.mars-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 20%, transparent), 
+                url('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=2000&auto=format&fit=crop') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    max-width: 700px;
+    background: transparent;
+}
+
+.planet-title {
+    font-size: 85px;
+    font-weight: 800;
+    color: #ff4d00; 
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    text-shadow: 0 0 20px rgba(255, 77, 0, 0.3);
+}
+
+.planet-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: #ff8c66;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+    text-align: justify;
+}
+.stats-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 77, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 150px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-card .label {
+    display: block;
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.stat-card .value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 40px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
